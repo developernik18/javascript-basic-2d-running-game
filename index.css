@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.canvasContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+#canvas1 {
+  /* background: blue; */
+  border: 5px solid white;
+}
+
+#playerImage, #backgroundImage, #enemyImage {
+  display: none;
+}
