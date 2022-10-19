@@ -9,6 +9,9 @@ export class Background {
     this.height = 720;
     this.speed = 10;
   }
+  restart() {
+    this.x = 0;
+  }
   draw(context) {
     context.drawImage(this.image, this.x, this.y, this.width, this.height);
     context.drawImage(

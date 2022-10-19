@@ -17,10 +17,11 @@
       this.markedForDeletion = false;
     }
     draw(context) {
-      context.strokeStyle = "white";
-      context.beginPath();
-      context.arc(this.x + this.width/2, this.y + this.height/2, this.width/2, 0, Math.PI * 2);
-      context.stroke();
+      // context.strokeStyle = "white";
+      // context.beginPath();
+      // context.arc(this.x + this.width/2, this.y + this.height/2, this.width/2, 0, Math.PI * 2);
+      // context.stroke();
+
       context.drawImage(
         this.image,
         this.frameX * this.width,

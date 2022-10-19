@@ -5,7 +5,7 @@ export class Player {
     this.gameHeight = gameHeight;
     this.width = 200;
     this.height = 200;
-    this.x = 10;
+    this.x = 100;
     this.y = this.gameHeight - this.height;
     this.frameX = 0;
     this.maxFrame = 8;
@@ -17,11 +17,13 @@ export class Player {
     this.vy = 0;
     this.weight = 1;
   }
+  restart() {
+    this.x = 100;
+    this.y = this.gameHeight - this.height;
+    this.maxFrame = 8;
+    this.frameY = 0;
+  }
   draw(context) {
-    context.strokeStyle = "white";
-    context.beginPath();
-    context.arc(this.x + this.width/2, this.y + this.height/2, this.width/2, 0, Math.PI * 2);
-    context.stroke();
     context.drawImage(
       this.image,
       this.frameX * this.width,
@@ -53,7 +55,7 @@ export class Player {
       this.speed = 0;
     }
 
-    if (input.keys.indexOf("ArrowUp") > -1 && this.onGround()) {
+    if ((input.keys.indexOf("ArrowUp") > -1 || input.keys.indexOf("swipe up") > -1) && this.onGround()) {
       this.vy -= 30;
     }
 
